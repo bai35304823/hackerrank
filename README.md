@@ -13,8 +13,11 @@ SQL solutions are coded using MySQL
 | [2. The Restructured Array](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/the%20restructured%20array/the%20restructured%20array.jpg)  | Content Cell  |
 | [3. Do They Belong](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/do%20they%20belong/do%20they%20belong.jpg)  | Content Cell  |
 | [   Rearrange A Word](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/rearrange%20a%20word/rearrange%20a%20word.jpg)  | Content Cell  |
-| [   Amazon Sort the Summary](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/Amazon%20Sort%20the%20Summary/Sort%20the%20Summary.pdf)  | Content Cell  |
+| [   Simple Array Rotation Game](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/simple%20array%20rotation%20game/simple%20array%20rotation%20game.jpg)  | Content Cell  |
+| [   Plus Mult Array](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/Plus%20Mult%20Array/Plus%20Mult%20Array.jpg)  | Content Cell  |
 | [   String Compression](https://www.hackerrank.com/challenges/string-compression/problem)  | Content Cell  |
+| [   Amazon Sort the Summary](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/Amazon%20Sort%20the%20Summary/Sort%20the%20Summary.pdf)  | Content Cell  |
+| [   Make Median](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/Make%20Median/Make%20Median.jpg)  | Content Cell  |
 
 
 | Trial 1 Challenge  | Solution |
