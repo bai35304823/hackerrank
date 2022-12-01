@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 
  * @author m
- *
+ * @score 27/75
  */
 public class MinUniqueArrSum {
 

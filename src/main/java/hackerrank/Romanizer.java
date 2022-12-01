@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 
  * @author m
- *
+ * @score 50/50
  */
 public class Romanizer {
 

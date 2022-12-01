@@ -5,7 +5,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-// all test case pass, score 50/50
+
+/**
+ * 
+ * @author 
+ * @score 50/50
+ */
 public class The_restructured_array {
 	
 	public static List<Integer> getElement(List<Integer> arry, List<List<Integer>> query) {
