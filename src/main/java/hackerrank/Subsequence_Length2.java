@@ -1,110 +1,86 @@
 package hackerrank;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-import org.yaml.snakeyaml.Yaml;
-
-
-
 public class Subsequence_Length2 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//System.out.println(1&2);
-		//System.out.println(7&3);
-		//System.out.println();
-		System.out.println("All Non-empty Subsequences");
-		//printSubsequences(arr.length);
-		
+	private static int ans = 0;
+
+	static int getMaxLength(List<Integer> list) {
+		int[] arr = Optional
+				.ofNullable(list)
+				.orElseGet(Collections::emptyList)
+				.stream()
+				.mapToInt(i -> i)
+				.toArray();
+
 		ArrayList<Integer> path = new ArrayList<>();
-		
+
 		printSubsequences(arr, 0, path);
-		
-		System.out.println("********************");
-		System.out.println(sum);
-		//int b = 7&4&3;
-		//System.out.println();
-		///System.out.println(11&3);
-		//System.out.println(List.of(7,4,3).stream().reduce(0, (x, y) ->  x & y));
-		Optional<Integer> sss = List.of(11).stream().reduce((x, y) ->  x & y);
-		//System.out.println(sss);
-////System.out.println(sss.get() );
+
+		return ans;
 	}
 
-	
-	static int arr[] = new int[]{1, 2, 4,8};
-	ArrayList<Integer> ph = new ArrayList<Integer> ();
-	private static int sum = 0;
-	public static void printSubsequences(int[] arr, int index,
-            ArrayList<Integer> path)
-			{
-			
-			// Print the subsequence when reach
-			// the leaf of recursion tree
-			if (index == arr.length)
-			{
-			
+	public static void printSubsequences(int[] arr, int index, ArrayList<Integer> path) {
+
+		// Print the subsequence when reach
+		// the leaf of recursion tree
+		if (index == arr.length) {
+
 			// Condition to avoid printing
 			// empty subsequence
-			if (path.size() > 0)
-				System.out.println(path);
-			
-			/*
-			 * for (int j = 0; j < path.size(); j++) {
-			 * 
-			 * }
-			 */
-			Optional<Integer> sss = path.stream().reduce((x, y) ->  x & y);
-			if (sss.isPresent() && sss.get() != 0) {
-			
-				 sum = Math.max(sum,path.size());
-				 System.out.println("sum -> " +sum);
-			};
-			
+			if (path.size() > 0) {
+				//System.out.println(path);
+				
+				// bitwise AND of all the elements in the list
+				Optional<Integer> result_bitwise_and = path.stream().reduce((x, y) -> x & y);
+				if (result_bitwise_and.isPresent() && result_bitwise_and.get() != 0) {
+					ans = Math.max(ans, path.size());
+					// System.out.println("sum -> " + sum);
+				};
 			}
-			
-			else
-			{
-			
+				
+		}
+
+		else {
+
 			// Subsequence without including
 			// the element at current index
 			printSubsequences(arr, index + 1, path);
-			
+
 			path.add(arr[index]);
-			
+
 			// Subsequence including the element
 			// at current index
 			printSubsequences(arr, index + 1, path);
-			
+
 			// Backtrack to remove the recently
 			// inserted element
 			path.remove(path.size() - 1);
-			}
-			return;
-			}
-				
-    static void printSubsequences(int n)
-    {
-        /* Number of subsequences is (2**n -1)*/
-        int opsize = (int)Math.pow(2, n);
-       
-        /* Run from counter 000..1 to 111..1*/
-        for (int counter = 1; counter < opsize; counter++)
-        {
-        	 int sum = 0;
-            for (int j = 0; j < n; j++)
-            {
-                /* Check if jth bit in the counter is set
-                    If set then print jth element from arr[] */
-        
-                if (BigInteger.valueOf(counter).testBit(j))
-                    System.out.print(arr[j]+" ");
-                sum = Math.max(sum, j);
-            }
-            System.out.println();
-        }
+		}
+		return;
+	}
+
+	public static void main(String[] args) {
+		// sample case in question
+		// output: 3
+		System.out.println(getMaxLength(List.of(7, 4, 11, 8, 3)));
+
+		// sample case 0
+		// output: 4
+		initialize_ans();
+		System.out.println(getMaxLength(List.of(3, 1, 6, 2, 2)));
+
+		// sample case 1
+		// output: 1
+		initialize_ans();
+		System.out.println(getMaxLength(List.of(1, 2, 4, 8)));
+	}
+	
+	static void initialize_ans() {
+		ans = 0;
+	}
 }
-    }
