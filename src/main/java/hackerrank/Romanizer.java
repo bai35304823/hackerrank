@@ -83,7 +83,12 @@ public class Romanizer {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Sample Case 0
+		// output:  I
+		//   		II
+		//			III
+		//			IV
+		//			V
 		
 		StringBuilder sb = new StringBuilder();
 		Integer[] number = new Integer[] {1,2,3,4,5};
@@ -103,11 +108,9 @@ public class Romanizer {
 				try {
 					returnLst = getRoman(list);
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -115,6 +118,13 @@ public class Romanizer {
 		for(int i=0;i< returnLst.size();i++) {
 			System.out.println(returnLst.get(i));
 		}
+		
+		
+		// Sample Case 1
+		// TODO check
+		// output: [DXXV, DXXX, DXLIX, DD, D]
+		
+		System.out.println(getRoman(List.of(75,80,99,100,50)));
 	}
 
 }

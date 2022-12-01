@@ -1,7 +1,8 @@
 package hackerrank;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 
@@ -10,21 +11,17 @@ import java.util.List;
  */
 public class MinUniqueArrSum {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ArrayList<Integer> lst = new ArrayList<Integer>();
-		lst.add(2);
-		lst.add(2);
-		lst.add(4);
-		lst.add(5);
-		
-		int[] arr = new int[lst.size()];
+	static int minUniqueSum(List<Integer> lst) {
+		int[] arr = Optional.ofNullable(lst)
+				 .orElseGet(Collections::emptyList)
+				 .stream()
+				 .mapToInt(Integer::new)
+				 .toArray();
 		
 		for(int k=0;k<lst.size();k++) {
 			arr[k] = lst.get(k);
 		}
-
-		//ArrayList<Integer> resultList = new ArrayList<Integer>();
+		
 		for(int k=0; k<arr.length; k++) {
 			for(int l=k+1; l<arr.length; l++) {
 				if(arr[k] == arr[l]) {
@@ -37,7 +34,23 @@ public class MinUniqueArrSum {
 	    for(int i=0;i<arr.length;i++) {
 	    	totalResult = totalResult + arr[i];
 	    }
-	    System.out.println("sum: "+totalResult);
+		return totalResult;
+	}
+
+	
+	public static void main(String[] args) {
+	
+		// sample case 0
+		// output : 6
+		System.out.println(minUniqueSum(List.of(1,2,2)));
+		
+		// sample case 1
+		// output : 6
+		System.out.println(minUniqueSum(List.of(1,2,3)));
+		
+		// sample case 2
+		// output : 14
+		System.out.println(minUniqueSum(List.of(2,2,4,5)));
 		
 	}
 
