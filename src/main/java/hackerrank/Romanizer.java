@@ -2,7 +2,6 @@
 package hackerrank;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -41,8 +40,8 @@ public class Romanizer {
 
 		ArrayList<Integer> intLst = new ArrayList<Integer>();
 		intLst.add(1000);
-		intLst.add(990);
-		intLst.add(50);
+		intLst.add(900);
+		intLst.add(500);
 		intLst.add(400);
 		intLst.add(100);
 		intLst.add(90);
@@ -65,7 +64,6 @@ public class Romanizer {
 			StringBuffer strBf = new StringBuffer();
 			int j = 0;
 			int intLstSize = intLst.size();
-			int sub = 0;
 			int l = 0;
 			while (intLstSize == l || number > 0) {
 				while (number - intLst.get(j) >= 0) {
@@ -83,44 +81,11 @@ public class Romanizer {
 
 	public static void main(String[] args) {
 		// Sample Case 0
-		// output: I
-		// II
-		// III
-		// IV
-		// V
-
-		StringBuilder sb = new StringBuilder();
-		Integer[] number = new Integer[] { 1, 2, 3, 4, 5 };
-
-		List<Integer> list = new ArrayList<Integer>();
-		list.add(1);
-		list.add(2);
-		list.add(3);
-		list.add(4);
-		list.add(5);
-
-		List<String> returnLst = new ArrayList<String>();
-
-		for (int i = 0; i < number.length; i++) {
-			try {
-				try {
-					returnLst = getRoman(list);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-
-		for (int i = 0; i < returnLst.size(); i++) {
-			System.out.println(returnLst.get(i));
-		}
-
+		// output: [I, II, III, IV, V]
+		System.out.println(getRoman(List.of(1, 2, 3, 4, 5)));
+		
 		// Sample Case 1
-		// TODO check
-		// output: [DXXV, DXXX, DXLIX, DD, D]
-
+		// output: [LXXV, LXXX, XCIX, C, L]
 		System.out.println(getRoman(List.of(75, 80, 99, 100, 50)));
 	}
 
