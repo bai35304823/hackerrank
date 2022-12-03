@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class Romanizer {
 
-	public static List<String> getRoman(List<Integer> numbers) {
+	public static List<String> romanizer(List<Integer> numbers) {
 
 		// String strArr[] =
 		// {"M","CM","D","CD","C","XC","L","XL","X","IX","VIII","VII","VI","V","IV","III","II","I"};
@@ -82,11 +82,11 @@ public class Romanizer {
 	public static void main(String[] args) {
 		// Sample Case 0
 		// output: [I, II, III, IV, V]
-		System.out.println(getRoman(List.of(1, 2, 3, 4, 5)));
+		System.out.println(romanizer(List.of(1, 2, 3, 4, 5)));
 		
 		// Sample Case 1
 		// output: [LXXV, LXXX, XCIX, C, L]
-		System.out.println(getRoman(List.of(75, 80, 99, 100, 50)));
+		System.out.println(romanizer(List.of(75, 80, 99, 100, 50)));
 	}
 
 }
