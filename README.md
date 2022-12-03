@@ -1,6 +1,6 @@
 # Efficient NAs to HackerRank problems
 
-NAs are coded using Java 8
+Solutions are coded using Java 8
 
 SQL NAs are coded using MySQL
 
