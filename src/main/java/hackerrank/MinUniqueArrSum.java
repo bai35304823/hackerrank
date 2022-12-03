@@ -47,7 +47,10 @@ public class MinUniqueArrSum {
 		// sample case 2
 		// output : 14
 		System.out.println(minUniqueSum(List.of(2, 2, 4, 5)));
-
+		
+		// sample case actual
+		// output : 28271
+		System.out.println(minUniqueSum(List.of(1659,710,710,1730,1808,2043,1613,1841,1328,504,1730,2545,493,879,1441,2043,1613,710,1613,1250)));
 	}
 
 }
