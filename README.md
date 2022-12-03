@@ -2,7 +2,7 @@
 
 Solutions are coded using Java 8
 
-SQL NAs are coded using MySQL
+SQL Solutions are coded using MySQL
 
 | SE Assessment Challenge  | NA |
 | ------------- | ------------- |
