@@ -63,7 +63,7 @@ public class The_restructured_array {
 	}
 
 	public static final <T> List<T> ofEmptyList(List<T> list) {
-		return (List<T>) (Optional.ofNullable(list).orElseGet(Collections::emptyList));
+		return Optional.ofNullable(list).orElseGet(Collections::emptyList);
 	}
 
 	public static void main(String[] args) {
