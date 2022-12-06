@@ -20,11 +20,6 @@ public class rearrange_a_word {
 	 * with s[j]. Reverse the order of all of the elements after index i till the
 	 * last element.
 	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-System.out.println(biggerIsGreater("baca"));
-	}
-
 	
 	/**
      * method to find the next lexicographical greater string
@@ -32,7 +27,7 @@ System.out.println(biggerIsGreater("baca"));
      * @param w
      * @return a new string
      */
-    static String biggerIsGreater(String w) {
+    static String rearrangeWord(String w) {
         char charArray[] = w.toCharArray();
         int n = charArray.length;
         int endIndex = 0;
@@ -82,4 +77,22 @@ System.out.println(biggerIsGreater("baca"));
         charArray[i] = charArray[j];
         charArray[j] = temp;
     }
+    
+    public static void main(String[] args) {		
+		// sample case in question
+		// output: "bcaa"
+		System.out.println(rearrangeWord("baca"));
+
+		// sample case 0
+		// output: "yx"
+		System.out.println(rearrangeWord("xy"));
+
+		// sample case 1
+		// output: "no answer"
+		System.out.println(rearrangeWord("pp"));
+		
+		// sample case 1
+		// output: "hegf"
+		System.out.println(rearrangeWord("hefg"));
+	}
 }

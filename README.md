@@ -1,19 +1,19 @@
 # Efficient NAs to HackerRank problems
 
-NAs are coded using Java 8
+Solutions are coded using Java 8
 
-SQL NAs are coded using MySQL
+SQL Solutions are coded using MySQL
 
 | SE Assessment Challenge  | NA |
 | ------------- | ------------- |
-| [1. Hackathon At Hackerrank](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/hackathon%20at%20hackerrank/hackathon%20at%20hackerrank.jpg)  | [NA.java]()  |
-| [2. Romanizer](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/romanizer/romanizer.jpg)  | [Solution.java](src/main/java/hackerrank/Romanizer.java)  |
-| [3. Minimum Unique Array Sum](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/minimum%20unique%20array%20sum/minimum%20unique%20array%20sum.jpg)  | [Solution.java](src/main/java/hackerrank/MinUniqueArrSum.java)  |
-| [1. Subsequence length](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/subsequence%20length/subsequence%20length.jpg)  | [Solution.java](src/main/java/hackerrank/Subsequence_Length.java)  <br /> [Solution2.java](src/main/java/hackerrank/Subsequence_Length1.java)  <br /> [Solution3.java](src/main/java/hackerrank/Subsequence_Length2.java) 
+| [1. Hackathon At Hackerrank](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/hackathon%20at%20hackerrank/hackathon%20at%20hackerrank.jpg)  |[Solution.java](src/main/java/hackerrank/hackathon_at_hackerrank2.java)  |
+| [2. Romanizer](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/romanizer/romanizer.jpg)  |[Solution.java](src/main/java/hackerrank/convert_number_roman_number.java)  <br /> [Solution2.java](src/main/java/hackerrank/Romanizer.java)  |
+| [3. Minimum Unique Array Sum](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/minimum%20unique%20array%20sum/minimum%20unique%20array%20sum.jpg)  | [Solution.java](src/main/java/hackerrank/MinUniqueArrSum.java)  <br />[Solution2.java](src/main/java/hackerrank/minimum_unique_array_sum.java) |
+| [1. Subsequence length](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/subsequence%20length/subsequence%20length.jpg)  | [Solution.java](src/main/java/hackerrank/Subsequence_Length_dp.java)  <br />[Solution2.java](src/main/java/hackerrank/Subsequence_Length.java)  <br /> [Solution3.java](src/main/java/hackerrank/Subsequence_Length1.java)  <br /> [Solution4.java](src/main/java/hackerrank/Subsequence_Length2.java) 
 | [2. The Restructured Array](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/the%20restructured%20array/the%20restructured%20array.jpg)  | [Solution.java](src/main/java/hackerrank/The_restructured_array.java)  |
-| [3. Do They Belong](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/do%20they%20belong/do%20they%20belong.jpg)  | [NA.java]()  |
-| [   Rearrange A Word](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/rearrange%20a%20word/rearrange%20a%20word.jpg)  | [NA.java]()  |
-| [   Simple Array Rotation Game](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/simple%20array%20rotation%20game/simple%20array%20rotation%20game.jpg)  | [NA.java]()  |
+| [3. Do They Belong](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/do%20they%20belong/do%20they%20belong.jpg)  | [Solution.java](src/main/java/hackerrank/Triangle_Result.java)  |
+| [   Rearrange A Word](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/rearrange%20a%20word/rearrange%20a%20word.jpg)  |[Solution.java](src/main/java/hackerrank/rearrange_a_word.java)   |
+| [   Simple Array Rotation Game](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/simple%20array%20rotation%20game/simple%20array%20rotation%20game.jpg)  | [NA.java]() |
 | [   Plus Mult Array](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/Plus%20Mult%20Array/Plus%20Mult%20Array.jpg)  | [NA.java]()  |
 | [   String Compression](https://www.hackerrank.com/challenges/string-compression/problem)  | [NA.java]()  |
 | [   Amazon Sort the Summary](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/Amazon%20Sort%20the%20Summary/Sort%20the%20Summary.pdf)  | [NA.java]()  |
