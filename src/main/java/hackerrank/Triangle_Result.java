@@ -3,6 +3,7 @@ package hackerrank;
 /**
  * 
  * @author
+ * @ test case pass 36/50
  * @score 50/75
  */
 
