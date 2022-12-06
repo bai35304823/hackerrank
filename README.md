@@ -1,4 +1,4 @@
-# Efficient NAs to HackerRank problems
+# Efficient Solutions to HackerRank problems
 
 Solutions are coded using Java 8
 
