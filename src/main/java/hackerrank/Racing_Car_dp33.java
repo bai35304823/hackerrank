@@ -5,12 +5,13 @@ import java.util.List;
 import java.util.Optional;
 
 //https://leetcode.com/problems/minimum-sideway-jumps/solutions/1152455/java-c-python-dp-greedy-bonus/?orderBy=most_votes
-public class Racing_Car_dp2 {
+public class Racing_Car_dp33 {
 	/*
 	 * DP
 	 * 
-	 * dp[0] = minimum move to reach lane 1 dp[1] = minimum move reach lane 2 dp[2]
-	 * = minimum move reach lane 3
+	 * dp[0] = minimum move to reach lane 1 
+	 * dp[1] = minimum move reach lane 2 
+	 * dp[2] = minimum move reach lane 3
 	 * 
 	 * If meet a obstacle, set its dp[i] to infinity. result equals to min(dp)
 	 * 
@@ -20,7 +21,7 @@ public class Racing_Car_dp2 {
 	 * For every other lane, the number of side move is the smallest among:
 	 * 
 	 * The number of move for the current lane, or The number of move for other
-	 * lanes plus 1.
+	 * lines plus 1.
 	 */
 	static int minimumMovement(List<Integer> list) {
 
@@ -32,29 +33,48 @@ public class Racing_Car_dp2 {
 		}
 		// Initialization is a boundary case
 		// obstacle with a large value
-		int[] dp = { 1000000, 1, 0, 1 };
-		for (int i : obstacles) {
-			dp[i] = dp[0];
-			for (int j = 1; j < 4; ++j)
-				// if obstacle trigger
-				if (j == i)
-					for (int k = 1; k < 4; ++k)
-						// j == k ? 0(current lane) : 1 (move to other lane)
-						dp[j] = Math.min(dp[j], dp[k] + (j == k ? 0 : 1));
+		int[] dp = new int[] { 1, 0, 1 };
+
+		for (int i = 0; i < obstacles.length; i++) {
+			switch (obstacles[i]) {
+			case 1:
+				dp[0] = Integer.MAX_VALUE;
+				dp[1] = min(dp[1], dp[2] + 1);
+				dp[2] = min(dp[1] + 1, dp[2]);
+				break;
+			case 2:
+				dp[0] = min(dp[0], dp[2] + 1);
+				dp[1] = Integer.MAX_VALUE;
+				dp[2] = min(dp[0] + 1, dp[2]);
+				break;
+			case 3:
+				dp[0] = min(dp[0], dp[1] + 1);
+				dp[1] = min(dp[0] + 1, dp[1]);
+				dp[2] = Integer.MAX_VALUE;
+				break;
+			}
 		}
-		return Math.min(dp[1], Math.min(dp[2], dp[3]));
+		return min(dp[0], dp[1], dp[2]);
 
 	}
 
-	public static void main(String[] args) {
+	static int min(int... vals) {
+		int min = Integer.MAX_VALUE;
+		for (int val : vals) {
+			if (val >= 0)
+				min = Math.min(min, val);
+		}
+		return min;
+	}
 
+	public static void main(String[] args) {
 		// sample case 0
 		// output: 1
-		 System.out.println(minimumMovement(List.of(1,2,3)));
+		System.out.println(minimumMovement(List.of(2, 1, 2)));
 
 		// sample case 1
 		// output: 2
-		 System.out.println(minimumMovement(List.of(2, 1, 3)));
+		System.out.println(minimumMovement(List.of(2, 1, 3, 2)));
 
 		// test case actual 0
 		// output: 2

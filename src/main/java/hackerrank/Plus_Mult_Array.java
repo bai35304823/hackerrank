@@ -14,7 +14,7 @@ public class Plus_Mult_Array {
 		for (int i = 0; i < n; i++) {
 			// if i is even
 			if ((i & 1) == 0) {
-				if (x % 2 == 0) {
+				if ((x & 1) == 0) {
 					evenSum += num[i];
 					x++;
 				} else {
@@ -22,7 +22,7 @@ public class Plus_Mult_Array {
 					x++;
 				}
 			} else {
-				if (y % 2 == 0) {
+				if ((y & 1) == 0) {
 					oddSum += num[i];
 					y++;
 				} else {

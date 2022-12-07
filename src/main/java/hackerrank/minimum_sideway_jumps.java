@@ -1,6 +1,8 @@
 package hackerrank;
 //https://leetcode.com/problems/minimum-sideway-jumps/discuss/1152665/JavaC%2B%2BPython-DP-O(1)-space
 
+import java.util.List;
+
 //https://leetcode.com/problems/min-cost-climbing-stairs/discuss/?currentPage=1&orderBy=hot&query=
 public class minimum_sideway_jumps {
 	public static int minSideJumps(int[] obstacles) {
@@ -15,14 +17,14 @@ public class minimum_sideway_jumps {
                jumps[obstacle - 1] = 1000000; /* Set jump to very large number. */
            }
            for (int currentLane = 0; currentLane < 3; ++currentLane) { /* for each lane calculate jumps */
-               if (obstacle != currentLane + 1) { /* if current lane doesn't have obstacle */
+               if (obstacle == currentLane + 1) { /* if current lane doesn't have obstacle */
                    /* From a lane frog can jump to two lanes
                    * +1 for next lane and +2 for next to next lane
                    * If currentLane +1 or +2 > 3 then module by 3 will give correct index of lane.
                    * We have 3 lanes : lane1 (index 0 of jumps array), lane2 (index 1 of jumps array), lane2 (index 2 of jumps array)
-                   * So if frog is at lane 1 (index = 0 ) then next two lanes are : (0+1) % 3 = 1, (0+2) % 3 = 2
-                   *    if frog is at lane 2 (index = 1 ) then next two lanes are : (1+1) % 3 = 2, (1+2) % 3 = 0
-                   *    if frog is at lane 3 (index = 2 ) then next two lanes are : (2+1) % 3 = 0, (2+2) % 3 = 1
+                   * So if frog is at lane 1 (index = 0 ) then next two lanes index are : (0+1) % 3 = 1, (0+2) % 3 = 2
+                   *    if frog is at lane 2 (index = 1 ) then next two lanes index are : (1+1) % 3 = 2, (1+2) % 3 = 0
+                   *    if frog is at lane 3 (index = 2 ) then next two lanes index are : (2+1) % 3 = 0, (2+2) % 3 = 1
                    * It is like a circular list, move ahead by +1 and +2 index.
                    * */
                    final int lane1 = (currentLane + 1) % 3; /* first lane where frog can jump*/
@@ -72,7 +74,8 @@ public class minimum_sideway_jumps {
 		int[] obstacles = {2,1,3,2};
 		int[] obstacles2 = {0,2,1,0,3,0};
 		int[] obstacles3 = {0,1,1,3,3,0};
-		System.out.println(minSideJumps_my(obstacles3));
+		//System.out.println(minSideJumps(obstacles));
+		System.out.println(minSideJumps(new int[] {2, 3, 2, 1,3,1}));
 	}
 	
 	
