@@ -1,9 +1,12 @@
 package hackerrank;
 import java.io.*;
+//
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+//https://www.geeksforgeeks.org/minimum-number-increment-operations-make-array-elements-equal/
 public class Copy_of_Array_Game {
 
 	// Java program to find min operation
