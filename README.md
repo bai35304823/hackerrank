@@ -13,8 +13,8 @@ SQL Solutions are coded using MySQL
 | [2. The Restructured Array](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/the%20restructured%20array/the%20restructured%20array.jpg)  | [Solution.java](src/main/java/hackerrank/The_restructured_array.java)  |
 | [3. Do They Belong](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/do%20they%20belong/do%20they%20belong.jpg)  | [Solution.java](src/main/java/hackerrank/Triangle_Result.java)  |
 | [   Rearrange A Word](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/rearrange%20a%20word/rearrange%20a%20word.jpg)  |[Solution.java](src/main/java/hackerrank/rearrange_a_word.java)   |
-| [   Simple Array Rotation Game](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/simple%20array%20rotation%20game/simple%20array%20rotation%20game.jpg)  | [NA.java]() |
-| [   Plus Mult Array](https://github.com/bai35304823/hackerrank/blob/59ffd587d9ff8342cdc184fc1807bbad901ab911/hackerank_picture/SE%20assessment/Plus%20Mult%20Array/plus.jpg)  | [Solution.java](src/main/java/hackerrank/Plus_Mult_Array.java)   |
+| [   Simple Array Rotation Game](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/simple%20array%20rotation%20game/simple%20array%20rotation%20game.jpg)  | [Solution.java](src/main/java/hackerrank/simple_array_rotation_game.java)  <br />[Solution2.java](src/main/java/hackerrank/simple_array_rotation_game2.java)  |
+| [   Plus Mult Array](https://github.com/bai35304823/hackerrank/blob/59ffd587d9ff8342cdc184fc1807bbad901ab911/hackerank_picture/SE%20assessment/Plus%20Mult%20Array/plus.jpg)  | [Solution.java](src/main/java/hackerrank/Plus_Mult_Array.java) <br/>  [Solution2.java](src/main/java/hackerrank/MultiArray.java)  |
 | [   String Compression](https://www.hackerrank.com/challenges/string-compression/problem)  | [NA.java]()  |
 | [   Amazon Sort the Summary](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/Amazon%20Sort%20the%20Summary/Sort%20the%20Summary.pdf)  | [NA.java]()  |
 | [   Make Median](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/Make%20Median/Make%20Median.jpg)  | [NA.java]()  |
@@ -38,7 +38,7 @@ SQL Solutions are coded using MySQL
 | ------------- | ------------- |
 | [1. The Superheroes Name](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_3/1.%20The%20Superheroes%20Name/2022-11-28_114925.png)  | [NA.java]()  |
 | [2. FizzBuzz](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_3/2.%20FizzBuzz/2022-11-28_115036.png)  | [NA.java]()  |
-| [3. Racing Car](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_3/3.%20Racing%20Car/2022-11-28_115315.png)  | [NA.java]()  |
+| [3. Racing Car](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_3/3.%20Racing%20Car/2022-11-28_115315.png)  | [Solution.java](src/main/java/hackerrank/Racing_Car_dp11.java)  <br />[Solution2.java](src/main/java/hackerrank/Racing_Car_dp2.java)  |
 
 | Trial 4 Challenge  | NA |
 | ------------- | ------------- |
