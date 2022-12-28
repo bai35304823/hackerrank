@@ -32,7 +32,7 @@ SQL Solutions are coded using MySQL
 | ------------- | ------------- |
 | [1. Least Earning Locations](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_2/1.%20Least%20Earning%20Locations/2022-11-28_113904.png)  | [NA.java]()  |
 | [2. Tool List](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_2/2.%20Tool%20List/2022-11-28_114213.png)  | [NA.java]()  |
-| [3. Distinct Characters Count (Java Stream)](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_2/3.%20Distinct%20Characters%20Count%20(Java%20Stream)/2022-11-28_114649.png)  | [NA.java]()  |
+| [3. Distinct Characters Count (Java Stream)](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_2/3.%20Distinct%20Characters%20Count%20(Java%20Stream)/2022-11-28_114649.png)  |  [Solution.java](src/main/java/hackerrank/Distinct_Characters_Count.java)  |
 
 
 | Trial 3 Challenge  | NA |
