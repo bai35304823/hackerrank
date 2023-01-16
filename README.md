@@ -21,27 +21,27 @@ SQL Solutions are coded using MySQL
 | [   Make Median](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/Make%20Median/Make%20Median.jpg)  | [NA.java]()  |
 
 
-| Trial 1 Challenge  | NA |
+| Trial 1 Challenge  | Solution |
 | ------------- | ------------- |
 | [1. Closest Numbers](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/1.%20Closest%20Numbers/2022-11-28_121134.png)  |  [Solution.java](src/main/java/hackerrank/closest_numbers.java)  |
 | [2. How Many Words](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/2.%20How%20Many%20Words/2022-11-28_121401.png)  | [Solution.java](src/main/java/hackerrank/how_many_word.java)  |
 | [3. University Career Fair](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/3.%20University%20Career%20Fair/2022-11-28_121551.png)  | [Solution.java](src/main/java/hackerrank/Interval_Scheduling_Algorithm.java)  |
 
 
-| Trial 2 Challenge  | NA |
+| Trial 2 Challenge  | Solution |
 | ------------- | ------------- |
 | [1. Least Earning Locations](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_2/1.%20Least%20Earning%20Locations/2022-11-28_113904.png)  | [NA.java]()  |
 | [2. Tool List](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_2/2.%20Tool%20List/2022-11-28_114213.png)  | [Solution.java](src/main/java/hackerrank/Tool_List.java)   |
 | [3. Distinct Characters Count (Java Stream)](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_2/3.%20Distinct%20Characters%20Count%20(Java%20Stream)/2022-11-28_114649.png)  |  [Solution.java](src/main/java/hackerrank/Distinct_Characters_Count.java)  |
 
 
-| Trial 3 Challenge  | NA |
+| Trial 3 Challenge  | Solution |
 | ------------- | ------------- |
 | [1. The Superheroes Name](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_3/1.%20The%20Superheroes%20Name/2022-11-28_114925.png)  | [NA.java]()  |
 | [2. FizzBuzz](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_3/2.%20FizzBuzz/2022-11-28_115036.png)  | [NA.java]()  |
 | [3. Racing Car](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_3/3.%20Racing%20Car/2022-11-28_115315.png)  | [Solution.java](src/main/java/hackerrank/Racing_Car_dp11.java)  <br />[Solution2.java](src/main/java/hackerrank/Racing_Car_dp2.java)  |
 
-| Trial 4 Challenge  | NA |
+| Trial 4 Challenge  | Solution |
 | ------------- | ------------- |
 | [1. JavaScript Inventory List](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_4/1.%20JavaScript%20Inventory%20List/2022-11-28_115720.png)  | [NA.java]()  |
 | [2. Angular Customer Search using pipe](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_4/2.%20Angular%20Customer%20Search%20using%20pipe/2022-11-28_120154.png)  | [NA.java]()  |
