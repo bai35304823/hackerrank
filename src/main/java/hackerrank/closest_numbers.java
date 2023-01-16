@@ -16,5 +16,21 @@ public class closest_numbers {
 	        return res;
 	    }
 	 
-	 
+	 public static void main(String[] args) {
+		// Sample case in question
+		// output : 2 4
+		//			4 6
+		System.out.println(closestNumbers(new ArrayList<Integer>(List.of(6,2,4,10))));
+
+		// Sample case 0
+		// output : 1 2
+		//			2 3
+		//			3 4
+		System.out.println(closestNumbers(new ArrayList<Integer>(List.of(4,2,1,3))));
+		
+		// Sample case 1
+		// output : -2 -1
+		//		    3 4
+		System.out.println(closestNumbers(new ArrayList<Integer>(List.of(4,-2,-1,3))));
+	}
 }
