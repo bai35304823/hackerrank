@@ -24,8 +24,8 @@ SQL Solutions are coded using MySQL
 | Trial 1 Challenge  | NA |
 | ------------- | ------------- |
 | [1. Closest Numbers](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/1.%20Closest%20Numbers/2022-11-28_121134.png)  |  [Solution.java](src/main/java/hackerrank/closest_numbers.java)  |
-| [2. How Many Words](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/2.%20How%20Many%20Words/2022-11-28_121401.png)  | [NA.java]()  |
-| [3. University Career Fair](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/3.%20University%20Career%20Fair/2022-11-28_121551.png)  | [NA.java]()  |
+| [2. How Many Words](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/2.%20How%20Many%20Words/2022-11-28_121401.png)  | [Solution.java](src/main/java/hackerrank/how_many_word.java)  |
+| [3. University Career Fair](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/3.%20University%20Career%20Fair/2022-11-28_121551.png)  | [Solution.java](src/main/java/hackerrank/Interval_Scheduling_Algorithm.java)  |
 
 
 | Trial 2 Challenge  | NA |
