@@ -8,7 +8,7 @@ SQL Solutions are coded using MySQL
 | ------------- | ------------- |
 | [1. Hackathon At Hackerrank](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/hackathon%20at%20hackerrank/hackathon%20at%20hackerrank.jpg)  |[Solution.java](src/main/java/hackerrank/hackathon_at_hackerrank2.java)  |
 | [2. Romanizer](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/romanizer/romanizer.jpg)  |[Solution.java](src/main/java/hackerrank/convert_number_roman_number.java)  <br /> [Solution2.java](src/main/java/hackerrank/Romanizer.java)  |
-| [3. Minimum Unique Array Sum](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/minimum%20unique%20array%20sum/minimum%20unique%20array%20sum.jpg)  | [Solution.java](src/main/java/hackerrank/MinUniqueArrSum.java)  <br />[Solution2.java](src/main/java/hackerrank/minimum_unique_array_sum.java) |
+| [3. Minimum Unique Array Sum](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/minimum%20unique%20array%20sum/minimum%20unique%20array%20sum.jpg)  | [Solution.java](src/main/java/hackerrank/minimum_unique_array_sum.java)  <br /> [Solution2.java](src/main/java/hackerrank/MinUniqueArrSum.java) |
 | [1. Subsequence length](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/subsequence%20length/subsequence%20length.jpg)  | [Solution.java](src/main/java/hackerrank/Subsequence_Length_dp.java)  <br />[Solution2.java](src/main/java/hackerrank/Subsequence_Length.java)  <br /> [Solution3.java](src/main/java/hackerrank/Subsequence_Length1.java)  <br /> [Solution4.java](src/main/java/hackerrank/Subsequence_Length2.java) 
 | [2. The Restructured Array](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/SE%20assessment/the%20restructured%20array/the%20restructured%20array.jpg)  | [Solution.java](src/main/java/hackerrank/The_restructured_array.java)  |
 | [3. Do They Belong](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/do%20they%20belong/do%20they%20belong.jpg)  | [Solution.java](src/main/java/hackerrank/Triangle_Result.java)  |
@@ -23,7 +23,7 @@ SQL Solutions are coded using MySQL
 
 | Trial 1 Challenge  | NA |
 | ------------- | ------------- |
-| [1. Closest Numbers](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/1.%20Closest%20Numbers/2022-11-28_121134.png)  | [NA.java]()  |
+| [1. Closest Numbers](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/1.%20Closest%20Numbers/2022-11-28_121134.png)  |  [Solution.java](src/main/java/hackerrank/closest_numbers.java)  |
 | [2. How Many Words](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/2.%20How%20Many%20Words/2022-11-28_121401.png)  | [NA.java]()  |
 | [3. University Career Fair](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_1/3.%20University%20Career%20Fair/2022-11-28_121551.png)  | [NA.java]()  |
 
