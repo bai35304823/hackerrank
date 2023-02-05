@@ -1,5 +1,6 @@
 package com.demo.spring.Application.model;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 
 import javax.persistence.Entity;
@@ -16,18 +17,14 @@ import lombok.Setter;
 public class Booking {
 	@Id
     private String bookingId;
-    private String customerName;
+    private String passengerId;
     private Date dateOfFlight;
     private String departure;
     private String destination;
     private String seatNo;
-    private String costOfFlight;
+    private BigDecimal ticketCost;
+    private BigDecimal totalAmt;
     private String flightId;
-	@Override
-	public String toString() {
-		return "Booking [bookingId=" + bookingId + ", customerName=" + customerName + ", dateOfFlight=" + dateOfFlight
-				+ ", departure=" + departure + ", destination=" + destination + ", seatNo=" + seatNo + ", costOfFlight="
-				+ costOfFlight + ", flightId=" + flightId + "]";
-	}
+	
     
 }

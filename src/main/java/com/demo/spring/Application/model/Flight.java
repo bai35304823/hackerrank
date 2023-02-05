@@ -13,11 +13,13 @@ import lombok.Setter;
 @Table(name = "FLIGHT")
 public class Flight {
 	@Id
-    private String id;
+    private String scheduleId;
     private String destCountry;
     private String departCountry;
     private String destAirport;
     private String departAirport;
     private String capacity;
-    private String PlaneId;
+    private String planeRegNo;
+    private String departureTime;
+    private String arrivalTime;
 }
