@@ -40,21 +40,17 @@ public class minimum_unique_array_sum {
 		if (Objects.isNull(input) || 0 == input.length) {
 			return 0;
 		}
-		double sum = input[0];
-
-		long prev = input[0];
-		long cur;
-
-		for (int i = 1; i < input.length; i++) {
-			cur = input[i];
-			if (cur <= prev) {
-				cur = ++prev;
-			}
-			prev = cur;
-			sum += cur;
-
-		}
-		return (int) Math.round(sum);
+		/*
+		 * double sum = input[0];
+		 * 
+		 * long prev = input[0]; long cur;
+		 * 
+		 * for (int i = 1; i < input.length; i++) { cur = input[i]; if (cur <= prev) {
+		 * cur = ++prev; } prev = cur; sum += cur;
+		 * 
+		 * } return (int) Math.round(sum);
+		 */
+		return minUniqueSum(input);
 	}
 
 	public static void main(String[] args) {
