@@ -8,5 +8,5 @@ import com.demo.spring.Application.model.Registration;
 public interface RegistrationRepository extends JpaRepository<Registration, String> {
 	// @Query(value = "select * from REGISTRATIONS tu where tu.EMAIL= ?1", nativeQuery = true)
 	  Registration findByEmail(String email);
-	 
+	  Registration findByPhone(String phone);
 }

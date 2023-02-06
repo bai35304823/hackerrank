@@ -1,7 +1,11 @@
 package com.demo.spring.Application.repository;
+import java.sql.Date;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.demo.spring.Application.model.Airport;
 import com.demo.spring.Application.model.Booking;
 import com.demo.spring.Application.model.Registration;
 
@@ -9,5 +13,6 @@ import com.demo.spring.Application.model.Registration;
 public interface BookingRepository extends JpaRepository<Booking, String> {
 	// @Query(value = "select * from REGISTRATIONS tu where tu.EMAIL= ?1", nativeQuery = true)
 	Booking findByBookingId(String bookingId);
-	 
+	List<Booking> findByDateOfFlight(Date dateOfFlight);
+	
 }

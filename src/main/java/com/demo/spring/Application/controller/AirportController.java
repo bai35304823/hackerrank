@@ -2,6 +2,8 @@ package com.demo.spring.Application.controller;
 
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,11 +32,21 @@ public class AirportController {
     
     @PostMapping("/airport/delOne")
     public void deleteAirport(@RequestBody Airport airport) {
-    	airportRepository.deleteById(airport.getAirportCode());
+    	airportRepository.deleteByAirportCode(airport.getAirportCode());
+    }
+    
+    @PostMapping("/airport/updateBy")
+    public void updateByAirportCode(@RequestBody Airport airport) {
+    	Airport airportDB = airportRepository.findByAirportCode(airport.getAirportCode());
+    	airportDB.setAirportName(airport.getAirportName());
+    	airportDB.setAirportCode(airport.getAirportCode());
+    	// spring data save() method will help you to perform both: 
+        // adding new item and updating an existed item.	
+    	airportRepository.save(airport);
     }
     
     @PostMapping("/airport/getOne/{airportCode}")
-    public Airport getOne(@PathVariable(value="airportCode") String airportCode) {
+    public Airport getByAirportCode(@PathVariable(value="airportCode") String airportCode) {
     	return airportRepository.findByAirportCode(airportCode);
     }
     
