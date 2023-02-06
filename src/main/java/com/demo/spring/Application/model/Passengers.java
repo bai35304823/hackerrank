@@ -15,7 +15,7 @@ import lombok.Setter;
 @Setter 
 @Table(name = "PASSENGERS")
 public class Passengers {
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id //@GeneratedValue(strategy=GenerationType.IDENTITY)
 	//@Column(columnDefinition="default 'G0001'")
     private String passengerID;
     private String passengerName;
