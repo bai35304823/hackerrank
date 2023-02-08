@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "a90751a3-1ed8-4225-9bea-18beb49557b5",
+		"name": "Airport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addAirport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airportName\":\"Singapor\",\r\n    \"countryId\":\"SG\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9301/api/v2/airport/addOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9301",
+					"path": [
+						"api",
+						"v2",
+						"airport",
+						"addOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAirport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"airportCode\":\"A0007\",\r\n\"airportName\":\"SiangMA\",\r\n\"countryId\":\"SGMA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9301/api/v2/airport/updateByAirportCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9301",
+					"path": [
+						"api",
+						"v2",
+						"airport",
+						"updateByAirportCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DelteaddAirport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airportCode\":\"A0007\",\r\n    \"airportName\":\"\",\r\n    \"countryId\":\"\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9301/api/v2/airport/delOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9301",
+					"path": [
+						"api",
+						"v2",
+						"airport",
+						"delOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAirport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9301/api/v2/airport/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9301",
+					"path": [
+						"api",
+						"v2",
+						"airport",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

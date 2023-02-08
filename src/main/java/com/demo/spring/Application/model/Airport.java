@@ -13,6 +13,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.hibernate.annotations.Formula;
 import org.springframework.data.jpa.repository.Query;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,18 +27,10 @@ import lombok.Setter;
 @Table(name = "AIRPORT")
 public class Airport {
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="my_seq")
-	@SequenceGenerator(name="my_seq",sequenceName="airport_seq", allocationSize=1)
-	private int id;
-	//@Formula("'C' + RIGHT('000000' + CAST(ID AS VARCHAR(10)), 6)")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//@JsonIgnore
+	private long id; 
     private String airportCode;
-    @PreUpdate
-   	@PrePersist
-   	public void calc() {
-    	airportCode = StringUtils.leftPad(String.valueOf(id), 6, "0");
-   	}
-   
-    
     private String airportName;
     private String countryId;
 	
@@ -57,6 +51,17 @@ public class Airport {
 	}
 	public void setCountryId(String countryId) {
 		this.countryId = countryId;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	@Override
+	public String toString() {
+		return "Airport [airportCode=" + airportCode + ", airportName=" + airportName + ", countryId=" + countryId
+				+ "]";
 	}
     
     

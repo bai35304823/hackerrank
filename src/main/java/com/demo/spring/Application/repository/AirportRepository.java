@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.demo.spring.Application.model.Airport;
 
 @Repository
-public interface AirportRepository extends JpaRepository<Airport, String> {
+public interface AirportRepository extends JpaRepository<Airport, Long> {
 	
 	Airport findByAirportCode(String airportCode);
 	
@@ -15,8 +15,4 @@ public interface AirportRepository extends JpaRepository<Airport, String> {
 	Airport findByCountryId(String countryId);
 	
 	void deleteByAirportCode(String airportCode);
-	 
-	 @Query(value = "SELECT nextval('airport_seq')", nativeQuery =
-	            true)
-	    Long getNextSeriesId();
 }

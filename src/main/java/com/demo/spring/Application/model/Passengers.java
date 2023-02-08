@@ -25,5 +25,23 @@ public class Passengers {
 		return "Passengers [passengerID=" + passengerID + ", passengerName=" + passengerName + ", contactNo="
 				+ contactNo + "]";
 	}
+	public String getPassengerID() {
+		return passengerID;
+	}
+	public void setPassengerID(String passengerID) {
+		this.passengerID = passengerID;
+	}
+	public String getPassengerName() {
+		return passengerName;
+	}
+	public void setPassengerName(String passengerName) {
+		this.passengerName = passengerName;
+	}
+	public String getContactNo() {
+		return contactNo;
+	}
+	public void setContactNo(String contactNo) {
+		this.contactNo = contactNo;
+	}
     
 }

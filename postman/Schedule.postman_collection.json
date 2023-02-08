@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "ac1ba289-2a14-41f7-b6c4-7d6875cb39cc",
+		"name": "Schedule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListSchedule",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9301/api/v2/flight/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9301",
+					"path": [
+						"api",
+						"v2",
+						"flight",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddSchedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departCountry\":\"SG\",\r\n    \"destCountry\":\"CN\",\r\n    \"departureTime\":\"2028-12-10T13:45:00.000Z\",\r\n     \"arrivalTime\":\"2029-12-10T13:45:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9301/api/v2/flight/addOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9301",
+					"path": [
+						"api",
+						"v2",
+						"flight",
+						"addOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteSchedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"planeRegNo\":\"\",\r\n    \"planeMaker\":\"\",\r\n    \"planeModel\":\"\",\r\n    \"planeCapacity\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9301/api/v2/flight/delOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9301",
+					"path": [
+						"api",
+						"v2",
+						"flight",
+						"delOne"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

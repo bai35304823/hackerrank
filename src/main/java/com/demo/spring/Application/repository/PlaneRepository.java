@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import com.demo.spring.Application.model.Plane;
 
 @Repository
-public interface PlaneRepository extends JpaRepository<Plane, String> {
+public interface PlaneRepository extends JpaRepository<Plane, Long> {
 	// @Query(value = "select * from REGISTRATIONS tu where tu.EMAIL= ?1", nativeQuery = true)
 	//Plane findByEmail(String email);
 	Plane findByPlaneRegNo(String planeRegNo);

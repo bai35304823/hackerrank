@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.demo.spring.Application.model.Flight;
 
 @Repository
-public interface FlightRepository extends JpaRepository<Flight, String> {
+public interface FlightRepository extends JpaRepository<Flight, Long> {
 	// @Query(value = "select * from REGISTRATIONS tu where tu.EMAIL= ?1", nativeQuery = true)
 	 //Flight findById(String id);
 	Flight findByScheduleId(String scheduleId);
