@@ -1,18 +1,18 @@
 {
 	"info": {
-		"_postman_id": "29264d6c-d3d9-4f36-9a3e-4fb0350082d8",
-		"name": "Plane",
+		"_postman_id": "8a3d4c3e-e2f1-4c02-bb38-f432b680a55c",
+		"name": "Passengers",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "24578229"
 	},
 	"item": [
 		{
-			"name": "ListPlanes",
+			"name": "ListPassengers",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9302/api/v2/plane/getAll",
+					"raw": "http://localhost:9302/api/v2/passengers/getAll",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -21,7 +21,7 @@
 					"path": [
 						"api",
 						"v2",
-						"plane",
+						"passengers",
 						"getAll"
 					]
 				}
@@ -29,13 +29,13 @@
 			"response": []
 		},
 		{
-			"name": "AddPlanes",
+			"name": "AddPassengers",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"planeMaker\":\"Boeing\",\r\n    \"planeModel\":\"737\",\r\n    \"planeCapacity\":\"50\"\r\n}",
+					"raw": "{\r\n    \"passengerName\":\"Michael Pai\",\r\n    \"contactNo\":\"0123456789\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,7 +43,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9302/api/v2/plane/addOne",
+					"raw": "http://localhost:9302/api/v2/passengers/addOne",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -52,7 +52,7 @@
 					"path": [
 						"api",
 						"v2",
-						"plane",
+						"passengers",
 						"addOne"
 					]
 				}
@@ -60,13 +60,13 @@
 			"response": []
 		},
 		{
-			"name": "DeletePlanes",
+			"name": "UpdatePassengers",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"planeRegNo\":\"R0002\"\r\n}",
+					"raw": "{\r\n    \"passengerID\":\"G0002\",\r\n    \"passengerName\":\"Jon Pai\",\r\n    \"contactNo\":\"1123456789\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -74,7 +74,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9302/api/v2/plane/delOne",
+					"raw": "http://localhost:9302/api/v2/passengers/updateBy",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -83,8 +83,8 @@
 					"path": [
 						"api",
 						"v2",
-						"plane",
-						"delOne"
+						"passengers",
+						"updateBy"
 					]
 				}
 			},

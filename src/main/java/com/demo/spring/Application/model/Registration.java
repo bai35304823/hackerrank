@@ -1,8 +1,12 @@
 package com.demo.spring.Application.model;
 
+import java.sql.Timestamp;
+
 //package com.demo.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,11 +18,16 @@ public class Registration {
 	String adminName;
 	@Id
 	@Column(name = "EMAIL", nullable = false, length = 25)
+	//@Email(regexp = "^[\\\\w-\\\\.]+@([\\\\w-]+\\\\.)+[\\\\w-]{2,4}$")
+	@NotEmpty(message = "Email cannot be empty")
 	String email;
 	String phone;
 	String password;
 	byte[] salt;
 
+	private long accessCount;
+	private Timestamp accessTime;
+	
 	Registration() {
 		super();
 	}
@@ -29,6 +38,22 @@ public class Registration {
 
 	public void setSalt(byte[] salt) {
 		this.salt = salt;
+	}
+
+	public long getAccessCount() {
+		return accessCount;
+	}
+
+	public void setAccessCount(long accessCount) {
+		this.accessCount = accessCount;
+	}
+
+	public Timestamp getAccessTime() {
+		return accessTime;
+	}
+
+	public void setAccessTime(Timestamp accessTime) {
+		this.accessTime = accessTime;
 	}
 
 	public Registration(String adminName, String email, String phone, String password) {

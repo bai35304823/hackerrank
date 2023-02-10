@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "ac1ba289-2a14-41f7-b6c4-7d6875cb39cc",
+		"_postman_id": "779bcef9-c053-4772-baf1-5b76732e7d12",
 		"name": "Schedule",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24578229"
 	},
 	"item": [
 		{
@@ -11,17 +12,133 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9301/api/v2/flight/getAll",
+					"raw": "http://localhost:9302/api/v2/flight/getAll",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9301",
+					"port": "9302",
 					"path": [
 						"api",
 						"v2",
 						"flight",
 						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindScheduleByPlaneRegNo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9302/api/v2/flight/getByPlaneRegNo/R0001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9302",
+					"path": [
+						"api",
+						"v2",
+						"flight",
+						"getByPlaneRegNo",
+						"R0001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindScheduleByScheduleId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9302/api/v2/flight/getByScheduleId/S0007",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9302",
+					"path": [
+						"api",
+						"v2",
+						"flight",
+						"getByScheduleId",
+						"S0007"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindScheduleBySourceAndDestination",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9302/api/v2/flight/getBySourceAndDestination/CHN/SGP",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9302",
+					"path": [
+						"api",
+						"v2",
+						"flight",
+						"getBySourceAndDestination",
+						"CHN",
+						"SGP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateByScheduleNumber",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var dateNow = new Date().toISOString();  \r",
+							"\r",
+							"let moment = require('moment');\r",
+							"postman.setEnvironmentVariable(\"today-date\",dateNow);\r",
+							"postman.setEnvironmentVariable(\"future-date\", dateNow);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"scheduleId\": \"S0007\",\r\n    \"destCountryId\": \"SGP\",\r\n    \"destAirportCode\": \"A0004\",\r\n    \"departCountryId\": \"CHN\",\r\n    \"departAirportCode\": \"A0003\",\r\n    \"departureTime\": \"2025-12-10T13:45:00.000Z\",\r\n    \"arrivalTime\": \"2025-12-10T13:45:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9302/api/v2/flight/updateByScheduleNumber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9302",
+					"path": [
+						"api",
+						"v2",
+						"flight",
+						"updateByScheduleNumber"
 					]
 				}
 			},
@@ -34,7 +151,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"departCountry\":\"SG\",\r\n    \"destCountry\":\"CN\",\r\n    \"departureTime\":\"2028-12-10T13:45:00.000Z\",\r\n     \"arrivalTime\":\"2029-12-10T13:45:00.000Z\"\r\n}",
+					"raw": "{\r\n    \"departCountryId\":\"SGP\",\r\n     \"departAirportCode\":\"A0004\",\r\n    \"destCountryId\":\"CHN\",\r\n     \"destAirportCode\":\"A0005\",\r\n    \"departureTime\":\"2027-12-10T13:45:00.000Z\",\r\n     \"arrivalTime\":\"2027-12-10T13:45:00.000Z\",\r\n     \"planeRegNo\":\"R0001\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -42,12 +159,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9301/api/v2/flight/addOne",
+					"raw": "http://localhost:9302/api/v2/flight/addOne",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9301",
+					"port": "9302",
 					"path": [
 						"api",
 						"v2",
@@ -65,7 +182,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"planeRegNo\":\"\",\r\n    \"planeMaker\":\"\",\r\n    \"planeModel\":\"\",\r\n    \"planeCapacity\":\"\"\r\n}",
+					"raw": "{\r\n    \"scheduleId\":\"S0006\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -73,17 +190,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9301/api/v2/flight/delOne",
+					"raw": "http://localhost:9302/api/v2/flight/delByScheduleId",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9301",
+					"port": "9302",
 					"path": [
 						"api",
 						"v2",
 						"flight",
-						"delOne"
+						"delByScheduleId"
 					]
 				}
 			},
