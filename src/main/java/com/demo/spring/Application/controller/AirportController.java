@@ -67,6 +67,7 @@ public class AirportController {
 		airportDB.setCountryId(airport.getCountryId());
 		// spring data save() method will help you to perform both:
 		// adding new item and updating an existed item.
+		airportDB.setCountry(countryRepository.findByCountryId(airport.getCountryId()));
 		return airportRepository.save(airportDB);
 	}
 
