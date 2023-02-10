@@ -1,0 +1,135 @@
+Hibernate: 
+    
+    create table airport (
+       id bigint not null auto_increment,
+        airport_code varchar(255),
+        airport_name varchar(255),
+        country_id varchar(255),
+        country_country_id varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table booking (
+       id bigint not null auto_increment,
+        booking_id varchar(255),
+        date_of_flight date,
+        departure varchar(255),
+        destination varchar(255),
+        passenger_id varchar(255),
+        schedule_id varchar(255),
+        seat_no varchar(255),
+        ticket_cost decimal(19,2),
+        total_amt decimal(19,2),
+        flight_id bigint,
+        passengers_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table country (
+       country_id varchar(255) not null,
+        country_city varchar(255),
+        country_name varchar(255),
+        country_state varchar(255),
+        primary key (country_id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table flight (
+       id bigint not null auto_increment,
+        arrival_time datetime(6),
+        capacity varchar(255),
+        depart_airport_code varchar(255),
+        depart_country_id varchar(255),
+        departure_time datetime(6),
+        dest_airport_code varchar(255),
+        dest_country_id varchar(255),
+        plane_reg_no varchar(255),
+        schedule_id varchar(255),
+        depart_airport_id bigint,
+        depart_country varchar(255),
+        dest_airport_id bigint,
+        dest_country varchar(255),
+        plane_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table passengers (
+       id bigint not null auto_increment,
+        contact_no varchar(255),
+        passengerid varchar(255),
+        passenger_name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table plane (
+       id bigint not null auto_increment,
+        plane_capacity varchar(255),
+        plane_maker varchar(255),
+        plane_model varchar(255),
+        plane_reg_no varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table registrations (
+       email varchar(25) not null,
+        access_count bigint not null,
+        access_time datetime(6),
+        admin_name varchar(25) not null,
+        password varchar(255),
+        phone varchar(255),
+        salt tinyblob,
+        primary key (email)
+    ) engine=InnoDB
+Hibernate: 
+    
+    alter table airport 
+       add constraint FKnaq7sly1xg8epxby27m7524wc 
+       foreign key (country_country_id) 
+       references country (country_id)
+Hibernate: 
+    
+    alter table booking 
+       add constraint FK546eybei9q7dsna94vryofrbr 
+       foreign key (flight_id) 
+       references flight (id)
+Hibernate: 
+    
+    alter table booking 
+       add constraint FKb7djwsx49isftrhdh9taocmer 
+       foreign key (passengers_id) 
+       references passengers (id)
+Hibernate: 
+    
+    alter table flight 
+       add constraint FKhrdtvo3c2owjihew5tlm3to4m 
+       foreign key (depart_airport_id) 
+       references airport (id)
+Hibernate: 
+    
+    alter table flight 
+       add constraint FKsexuyxi5xx1sv5pfnfw6e696q 
+       foreign key (depart_country) 
+       references country (country_id)
+Hibernate: 
+    
+    alter table flight 
+       add constraint FKl14vudryha9kqbxkh3c9wols0 
+       foreign key (dest_airport_id) 
+       references airport (id)
+Hibernate: 
+    
+    alter table flight 
+       add constraint FK2kj9paq3aqm9xtiogys5ob3lo 
+       foreign key (dest_country) 
+       references country (country_id)
+Hibernate: 
+    
+    alter table flight 
+       add constraint FK7p9fvp6d7uh9cgn47uet8a8nb 
+       foreign key (plane_id) 
+       references plane (id)
