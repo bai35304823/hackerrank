@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "c3485e61-cee9-4124-a509-e56609453573",
+		"name": "Passengers Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24578229"
+	},
+	"item": [
+		{
+			"name": "ListPassengers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/passenger-service/api/v2/passengers/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"passenger-service",
+						"api",
+						"v2",
+						"passengers",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPassengers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"passengerName\":\"Michael Pai\",\r\n    \"contactNo\":\"0123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/passenger-service/api/v2/passengers/addOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"passenger-service",
+						"api",
+						"v2",
+						"passengers",
+						"addOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePassengers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"passengerID\":\"G0001\",\r\n    \"passengerName\":\"Jon Pai\",\r\n    \"contactNo\":\"1123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/passenger-service/api/v2/passengers/updateBy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"passenger-service",
+						"api",
+						"v2",
+						"passengers",
+						"updateBy"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
