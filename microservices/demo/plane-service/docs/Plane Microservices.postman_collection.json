@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "dad2333d-e37a-49ce-bbab-e832cb150180",
+		"name": "Plane Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24578229"
+	},
+	"item": [
+		{
+			"name": "ListPlanes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/plane-service/api/v2/plane/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"plane-service",
+						"api",
+						"v2",
+						"plane",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPlanes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"planeMaker\":\"Boeing\",\r\n    \"planeModel\":\"737\",\r\n    \"planeCapacity\":\"50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/plane-service/api/v2/plane/addOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"plane-service",
+						"api",
+						"v2",
+						"plane",
+						"addOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePlanes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"planeRegNo\":\"R0001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/plane-service/api/v2/plane/delOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"plane-service",
+						"api",
+						"v2",
+						"plane",
+						"delOne"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

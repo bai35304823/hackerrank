@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "42668b87-24c9-483a-b249-98eefb0b386c",
+		"name": "Admin Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24578229"
+	},
+	"item": [
+		{
+			"name": "RegAdministrator",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "Jsan3@gmail.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "123",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"bsp@gmail.com\",\r\n    \"adminName\": \"Michael\",\r\n    \"phone\": \"90849503\",\r\n    \"password\": \"_Pass001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/registration-service/api/v2/registrations/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"registration-service",
+						"api",
+						"v2",
+						"registrations",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginAdministrator",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "Jsan3@gmail.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "123",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/registration-service/api/v2/registrations/bsp@gmail.com/_Pass001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"registration-service",
+						"api",
+						"v2",
+						"registrations",
+						"bsp@gmail.com",
+						"_Pass001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

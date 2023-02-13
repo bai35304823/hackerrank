@@ -1,5 +1,4 @@
-package com.demo.spring.Application;
-
+package com.demo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,21 +11,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class DemoApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
-
+public class CountryServiceApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(CountryServiceApplication.class, args);
+    }
 }
-/*
- * @RestController class ServiceInstanceRestController {
- * 
- * @Autowired private DiscoveryClient discoveryClient;
- * 
- * @RequestMapping("/service-instances/{applicationName}") public
- * List<ServiceInstance> serviceInstancesByApplicationName(
- * 
- * @PathVariable String applicationName) { return
- * this.discoveryClient.getInstances(applicationName); } }
- */
+
+@RestController
+class ServiceInstanceRestController {
+
+	@Autowired
+	private DiscoveryClient discoveryClient;
+
+	@RequestMapping("/service-instances/{applicationName}")
+	public List<ServiceInstance> serviceInstancesByApplicationName(
+			@PathVariable String applicationName) {
+		return this.discoveryClient.getInstances(applicationName);
+	}
+}

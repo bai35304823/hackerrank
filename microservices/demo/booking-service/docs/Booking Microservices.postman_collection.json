@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "8a7b2c8f-fc6a-4be2-afbb-0071e4a42a9b",
+		"name": "Booking Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24578229"
+	},
+	"item": [
+		{
+			"name": "ListBookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/booking-service/api/v2/booking/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"booking-service",
+						"api",
+						"v2",
+						"booking",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"passengerId\": \"G0001\",\r\n    \"scheduleId\": \"S0002\",\r\n    \"dateOfFlight\": \"2023-12-12\",\r\n    \"seatNo\": \"14A\",\r\n    \"ticketCost\": \"1024\",\r\n    \"totalAmt\": \"200\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/booking-service/api/v2/booking/addOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"booking-service",
+						"api",
+						"v2",
+						"booking",
+						"addOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBookings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"bookingId\": \"B0001\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/booking-service/api/v2/booking/delOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"booking-service",
+						"api",
+						"v2",
+						"booking",
+						"delOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindByBookingId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/booking-service/api/v2/booking/getOne/B0001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"booking-service",
+						"api",
+						"v2",
+						"booking",
+						"getOne",
+						"B0001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindByBookingDate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/booking-service/api/v2/booking/getByBookingDate/2023-12-12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"booking-service",
+						"api",
+						"v2",
+						"booking",
+						"getByBookingDate",
+						"2023-12-12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
