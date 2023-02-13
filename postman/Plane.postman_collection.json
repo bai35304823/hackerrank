@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "72e8b2d5-cd63-44e5-bdeb-a75017260168",
+		"_postman_id": "29264d6c-d3d9-4f36-9a3e-4fb0350082d8",
 		"name": "Plane",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24578229"
 	},
 	"item": [
 		{
@@ -11,12 +12,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9301/api/v2/plane/getAll",
+					"raw": "http://localhost:9302/api/v2/plane/getAll",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9301",
+					"port": "9302",
 					"path": [
 						"api",
 						"v2",
@@ -34,7 +35,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"planeMaker\":\"Boeing\",\r\n    \"planeModel\":\"732\",\r\n    \"planeCapacity\":\"500\"\r\n}",
+					"raw": "{\r\n    \"planeMaker\":\"Boeing\",\r\n    \"planeModel\":\"737\",\r\n    \"planeCapacity\":\"50\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -42,12 +43,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9301/api/v2/plane/addOne",
+					"raw": "http://localhost:9302/api/v2/plane/addOne",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9301",
+					"port": "9302",
 					"path": [
 						"api",
 						"v2",
@@ -65,7 +66,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"planeRegNo\":\"\",\r\n    \"planeMaker\":\"\",\r\n    \"planeModel\":\"\",\r\n    \"planeCapacity\":\"\"\r\n}",
+					"raw": "{\r\n    \"planeRegNo\":\"R0002\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -73,12 +74,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9301/api/v2/plane/delOne",
+					"raw": "http://localhost:9302/api/v2/plane/delOne",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9301",
+					"port": "9302",
 					"path": [
 						"api",
 						"v2",

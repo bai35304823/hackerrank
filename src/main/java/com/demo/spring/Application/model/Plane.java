@@ -29,11 +29,7 @@ public class Plane {
     private String planeModel;
     private String planeCapacity;
    
-    @OneToMany
-    @JoinColumn
-	/*
-	 * (mappedBy = "plane" , fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	 */
+    @OneToMany(mappedBy = "plane" , fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     @JsonIgnore
     private List<Flight> flights;
 	

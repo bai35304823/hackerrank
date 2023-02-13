@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "4909b642-bb32-47c5-945b-d04b27c3abc2",
+		"name": "Country Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24578229"
+	},
+	"item": [
+		{
+			"name": "AddCountry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"countryId\":\"SGP\",\r\n    \"countryName\":\"Singapore\",\r\n     \"countryCity\":\"\",\r\n      \"countryState\":\"\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/country-service/api/v2/country/addOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"country-service",
+						"api",
+						"v2",
+						"country",
+						"addOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListCountry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/country-service/api/v2/country/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"country-service",
+						"api",
+						"v2",
+						"country",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

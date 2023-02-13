@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "58a570ce-4de8-4c39-aa52-4197d9b13911",
+		"name": "Airport Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24578229"
+	},
+	"item": [
+		{
+			"name": "AddAirport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airportName\":\"XianYang\",\r\n    \"countryId\":\"CHN\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/airports-service/api/v2/airport/addOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"airports-service",
+						"api",
+						"v2",
+						"airport",
+						"addOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAirport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"airportCode\":\"A0003\",\r\n\"airportName\":\"Shanghai\",\r\n\"countryId\":\"CHN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/airports-service/api/v2/airport/updateByAirportCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"airports-service",
+						"api",
+						"v2",
+						"airport",
+						"updateByAirportCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAirport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airportCode\":\"A0002\",\r\n    \"airportName\":\"\",\r\n    \"countryId\":\"\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/airports-service/api/v2/airport/delOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"airports-service",
+						"api",
+						"v2",
+						"airport",
+						"delOne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAirport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/airports-service/api/v2/airport/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"airports-service",
+						"api",
+						"v2",
+						"airport",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

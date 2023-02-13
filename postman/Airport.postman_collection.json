@@ -1,18 +1,19 @@
 {
 	"info": {
-		"_postman_id": "a90751a3-1ed8-4225-9bea-18beb49557b5",
+		"_postman_id": "4a4a8109-39cc-4fae-a181-07749be4bbc4",
 		"name": "Airport",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24578229"
 	},
 	"item": [
 		{
-			"name": "addAirport",
+			"name": "AddAirport",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"airportName\":\"Singapor\",\r\n    \"countryId\":\"SG\"\r\n    }",
+					"raw": "{\r\n    \"airportName\":\"XianYang\",\r\n    \"countryId\":\"CHN\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,12 +21,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9301/api/v2/airport/addOne",
+					"raw": "http://localhost:9302/api/v2/airport/addOne",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9301",
+					"port": "9302",
 					"path": [
 						"api",
 						"v2",
@@ -37,7 +38,7 @@
 			"response": []
 		},
 		{
-			"name": "updateAirport",
+			"name": "UpdateAirport",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -51,12 +52,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9301/api/v2/airport/updateByAirportCode",
+					"raw": "http://localhost:9302/api/v2/airport/updateByAirportCode",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9301",
+					"port": "9302",
 					"path": [
 						"api",
 						"v2",
@@ -68,13 +69,13 @@
 			"response": []
 		},
 		{
-			"name": "DelteaddAirport",
+			"name": "DeleteAirport",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"airportCode\":\"A0007\",\r\n    \"airportName\":\"\",\r\n    \"countryId\":\"\"\r\n    }",
+					"raw": "{\r\n    \"airportCode\":\"A0003\",\r\n    \"airportName\":\"\",\r\n    \"countryId\":\"\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -82,12 +83,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9301/api/v2/airport/delOne",
+					"raw": "http://localhost:9302/api/v2/airport/delOne",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9301",
+					"port": "9302",
 					"path": [
 						"api",
 						"v2",
@@ -104,12 +105,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9301/api/v2/airport/getAll",
+					"raw": "http://localhost:9302/api/v2/airport/getAll",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9301",
+					"port": "9302",
 					"path": [
 						"api",
 						"v2",

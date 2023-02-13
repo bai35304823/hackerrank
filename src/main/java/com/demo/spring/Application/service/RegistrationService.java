@@ -1,7 +1,5 @@
 package com.demo.spring.Application.service;
 
-import org.springframework.stereotype.Service;
-
 import com.demo.spring.Application.model.Registration;
 
 
