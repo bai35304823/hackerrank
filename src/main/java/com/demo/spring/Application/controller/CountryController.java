@@ -41,7 +41,7 @@ public class CountryController {
 
 	@PostMapping("/country/delOne")
 	@Transactional
-	public ResponseEntity<String> deletePlane(@RequestBody Country country) {
+	public ResponseEntity<String> deleteCountry(@RequestBody Country country) {
 		validateParams(country.getCountryId());
 
 		countryRepository.deleteById(country.getCountryId());
