@@ -9,6 +9,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,11 +18,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.demo.spring.Application.model.Login;
 import com.demo.spring.Application.model.Registration;
 import com.demo.spring.Application.repository.RegistrationRepository;
 import com.demo.spring.Application.service.RegistrationService;
+import com.google.gson.Gson;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/v2")
 public class RegistrationController {
 	private static final Log logger = LogFactory.getLog(RegistrationController.class);
@@ -46,6 +50,20 @@ public class RegistrationController {
 				registration.getPhone());
 		Registration savedRegistration = registrationService.save(registration);
 		return savedRegistration;
+	}
+	
+	 private static final Gson gson = new Gson();
+	 
+	@PostMapping("/registrations/login")
+	public ResponseEntity<String> authenticate(@RequestBody Login registration) {
+		Boolean authenticatedBoolean = registrationService.isValidUser(registration.getLoginid(), registration.getPassword());
+		logger.info("Registration Controller - authenticate : " + authenticatedBoolean);
+		String up = authenticatedBoolean ? "success"
+				: "Invalid email address or password. Maximum of three times to re-enter the "
+				+ "credentials, left times : " + (Long.parseLong(environment.getProperty("max.try.count"))
+						- registrationRepository.findByEmail(registration.getLoginid()).getAccessCount());
+		return new ResponseEntity<>("{\"status\" : \""+ up +"\"}", HttpStatus.OK);
+		
 	}
 
 	@PostMapping("/registrations/{email}/{password}")
