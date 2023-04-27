@@ -22,7 +22,6 @@ import com.demo.spring.Application.model.Login;
 import com.demo.spring.Application.model.Registration;
 import com.demo.spring.Application.repository.RegistrationRepository;
 import com.demo.spring.Application.service.RegistrationService;
-import com.google.gson.Gson;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
@@ -52,7 +51,7 @@ public class RegistrationController {
 		return savedRegistration;
 	}
 	
-	 private static final Gson gson = new Gson();
+	
 	 
 	@PostMapping("/registrations/login")
 	public ResponseEntity<String> authenticate(@RequestBody Login registration) {
