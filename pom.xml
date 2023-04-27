@@ -79,10 +79,10 @@
     <version>3.12.0</version>
 </dependency>
    		 
- <dependency>
+ <!--  <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-    </dependency>
+    </dependency>-->
     
 	</dependencies>
 <dependencyManagement>

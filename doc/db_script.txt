@@ -1,3 +1,4 @@
+CREATE SCHEMA `vlsdb` ;
 Hibernate: 
     
     create table airport (
