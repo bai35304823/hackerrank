@@ -65,15 +65,20 @@ public class RegistrationController {
 		
 	}
 
-	@PostMapping("/registrations/{email}/{password}")
-	public ResponseEntity<String> authenticate(@PathVariable(value = "email") String email,
+	@GetMapping("/registrations/{email}/{password}")
+	public ResponseEntity<Boolean> authenticate(@PathVariable(value = "email") String email,
 			@PathVariable(value = "password") String password) {
 		Boolean authenticatedBoolean = registrationService.isValidUser(email, password);
 		logger.info("Registration Controller - authenticate : " + authenticatedBoolean);
-		return ResponseEntity.status(HttpStatus.OK).body(authenticatedBoolean ? "Login success for application."
-				: "Invalid email address/password. Maximum of three times to re-enter the "
+		
+		if (authenticatedBoolean) {
+			return new ResponseEntity<>(authenticatedBoolean, HttpStatus.OK);
+		}
+	
+		throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,
+				"Invalid email address or password. Maximum of three times to re-enter the "
 						+ "credentials, left times : " + (Long.parseLong(environment.getProperty("max.try.count"))
-								- registrationRepository.findByEmail(email).getAccessCount()));
+								- registrationRepository.findByEmail( email).getAccessCount()));
 	}
 
 	private void validateParams(String adminName, String email, String password, String phone) {

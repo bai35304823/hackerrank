@@ -2,6 +2,7 @@ package com.demo.spring.Application.controller;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
@@ -11,9 +12,12 @@ import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +28,7 @@ import com.demo.spring.Application.repository.AirportRepository;
 import com.demo.spring.Application.repository.CountryRepository;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/v2")
 public class AirportController {
 	private static final Log logger = LogFactory.getLog(AirportController.class);
@@ -55,6 +60,18 @@ public class AirportController {
 		return ResponseEntity.status(HttpStatus.OK).body("Delete success for Airport " + airport.getAirportCode());
 	}
 
+	@DeleteMapping("/airport/{id}")
+    public Airport deleteAirportById(@PathVariable(value = "id") Long idFromClient) {
+
+        Optional<Airport> airportEntityOptional = airportRepository.findById(idFromClient);
+        Airport deleteAirport = new Airport();
+        if(airportEntityOptional.isPresent()){
+             deleteAirport = airportEntityOptional.get();
+        }
+        airportRepository.delete(deleteAirport);
+        return deleteAirport;
+    }
+	
 	@PostMapping("/airport/updateByAirportCode")
 	public Airport updateByAirportCode(@RequestBody Airport airport) {
 		logger.info("Airport :  " + airport);
@@ -70,12 +87,29 @@ public class AirportController {
 		airportDB.setCountry(countryRepository.findByCountryId(airport.getCountryId()));
 		return airportRepository.save(airportDB);
 	}
+	
+	@PutMapping("/airport/updateById/{id}")
+	public Airport updateById(@PathVariable(value = "id") Long id, @RequestBody Airport airport) {
+		logger.info("Airport :  " + airport);
+		validateParams(airport.getCountryId(), airport.getAirportName());
+		Optional<Airport> airportDB = airportRepository.findById(id);
+		if (!airportDB.isPresent()) {
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "The airport cannot found");
+		}
+	
+		return airportRepository.save(airport);
+	}
 
 	@PostMapping("/airport/getOne/{airportCode}")
 	public Airport getByAirportCode(@PathVariable(value = "airportCode") String airportCode) {
 		return airportRepository.findByAirportCode(airportCode);
 	}
-
+	
+	@GetMapping("/airport/getById/{id}")
+	public Airport getByAirportCode(@PathVariable(value = "id") Long id) {
+		return airportRepository.findById(id).get();
+	}
+	
 	@GetMapping("/airport/getAll")
 	public List<Airport> getAll() {
 		return airportRepository.findAll();
@@ -93,7 +127,7 @@ public class AirportController {
 					"The country code should be minimum 1 character and maximum 5 characters");
 		}
 
-		if (!airportName.matches("^[a-zA-Z0-9]*$")) {
+		if (!airportName.matches("^[ a-zA-Z0-9]*$")) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The airport name should be letters or digits");
 		}
 
