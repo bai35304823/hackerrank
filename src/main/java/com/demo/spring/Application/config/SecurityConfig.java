@@ -56,8 +56,8 @@
   AuthenticationManager authenticationManager =
   authenticationManagerBuilder.build();
   
-  http.csrf().disable().cors().disable() .authorizeHttpRequests()
-  .antMatchers("/authenticate", "/api/v2/registrations/**").permitAll()
+  http.csrf().disable().cors().and().authorizeHttpRequests()
+  .antMatchers("/authenticate", "/api/v2/registrations/**","/api/v2/registrations/**/**").permitAll()
   .anyRequest().authenticated() .and()
   .authenticationManager(authenticationManager)
   .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);

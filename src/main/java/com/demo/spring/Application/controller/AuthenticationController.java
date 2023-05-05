@@ -7,7 +7,9 @@
   import javax.annotation.Resource;
   
   import org.springframework.beans.factory.annotation.Autowired; import
-  org.springframework.http.HttpStatus; import
+  org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import
   org.springframework.security.authentication.AuthenticationManager; import
   org.springframework.security.authentication.
   UsernamePasswordAuthenticationToken; import
@@ -36,7 +38,7 @@
   
   @Autowired private AuthenticationManager authenticationManager;
   
-  @PostMapping("/authenticate") public String generateToken(@RequestBody Login
+  @PostMapping("/authenticate") public  ResponseEntity<String> generateToken(@RequestBody Login
   l) throws Exception { try { Registration registration =
   registrationRepository.findByEmail(l.getLoginid()); if
   (Objects.isNull(registration)) { throw new
@@ -49,5 +51,8 @@
   (Exception ex) {
 	  ex.printStackTrace();
 	  throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,
-  "Invalid Credentails"); } return jwtUtil.generateToken(l.getLoginid()); } }
+  "Invalid Credentails"); } 
+  //return jwtUtil.generateToken(l.getLoginid()); 
+	return new ResponseEntity<>("{\"status\" : \""+  jwtUtil.generateToken(l.getLoginid()) +"\"}", HttpStatus.OK);
+  } }
  
