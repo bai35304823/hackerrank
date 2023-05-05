@@ -41,10 +41,11 @@ public class JpaController {
 	public Registration register(@RequestBody Registration registration) {
 		return registrationService.save(registration);
 	}
-
-	@PostMapping("/authenticate")
-	public boolean authenticate(@RequestBody Registration registration) {
-		return registrationService.isValidUser(registration.getEmail(), registration.getPassword());
-	}
+	/*
+	 * @PostMapping("/authenticate") public boolean authenticate(@RequestBody
+	 * Registration registration) { return
+	 * registrationService.isValidUser(registration.getEmail(),
+	 * registration.getPassword()); }
+	 */
 
 }
