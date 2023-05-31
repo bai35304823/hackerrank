@@ -61,7 +61,19 @@ public class hackerton_Equalize_Team_Size_Challenge {
 		System.out.println(equalizeTeamSize(new ArrayList<>(List.of(4, 7, 7, 7, 2, 1, 1, 3)), 6));
 	}
 	
+	// Get the size of the array and set it as variable n
+	// If the size of the array is less than or equal to the possibilities of adjusting the size of the equipment, all the existing equipment in the array can be modified
+	// If all the elements are different, you would have only k+1 as possible teams
 	
+	// 1. Determine if the array has different values ​​from each other
+	// 2. If yes, return k+1
+	// If I have teams with the same number of members, I could consider them as optimal sizes and reduce the number of k possible teams to get the maximum
+	// 3. Select the teams with the same number of members.
+	// 4. Obtain the size of the array with the selected teams (to know how many teams with the same number of members already exist)
+	// 5. Obtain the set of teams whose number of members is greater than the optimal size, to define if I can reduce them and obtain more teams with the same number of members
+	// 6. Verify that the size of the set of equipment that can be reduced is less than k
+	// 7. In this case, return the sum of the equipment that already exists with optimal size and add those that can be reduced to that value.
+	// 8. Return the maximum number of teams that can be formed with the same number of possible members, reducing the teams to the optimal number of members.
 	public static int equalizeTeamSize(List<Integer> teams, int maxReduce) {
 	    int n = teams.size();
 	    if (maxReduce >= n) {
