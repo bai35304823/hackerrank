@@ -47,7 +47,7 @@ public class Help_Mario_2 {
 	}
 	
 	// lower type can be converted to higher type
-	public static double area(int m, int n, int [] h, int [] v) {
+	public static long area(int m, int n, int [] h, int [] v) {
 		
 		return (max_consecutive_length(h) + 1) * (max_consecutive_length(v) + 1);
 	}
