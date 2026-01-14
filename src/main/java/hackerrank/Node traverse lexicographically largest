@@ -1,0 +1,68 @@
+you are given an undirected connected graph of g_nodes ajd m connectiions. traverse all of the nodes at least once and store the order of traversal in arry A. then make an array B as described by the following algorithm.
+for(int i =0; i<A.size();i++) {
+  boolean found = 0;
+    for(int j =0; j<A.size();j++) {
+		if (A[i] = B[j]) {
+			found = 1;
+			break
+		}
+	}
+	if(found){
+	 B.pushBack(A[i]);
+	}
+}
+Select the traversal A to create the lexicographically largest array B possible.Return the resulting array B.
+Example
+g_nodes = 5
+g_from= [4,5,1,4,3]
+g_to =[5,1,4,3,2]
+there are g_nodes = 5 and M = 5 5 edges. Connected pairs are elements of g_from and g_to: (4,5),(5,1),(1,4),(4,3),(3,2),
+the graph loos like this, 
+      5
+     / \
+    4---1
+    |
+    3
+    |
+    2
+traverse the  graph 1st and store the order of traversalin array A, Determinging  the order of traversal is up to u/ For this exapmple,
+the optimal traversal is 
+5->4->3->2->3->4->1
+A =[5,4,3,2,3,4,1]
+Array B, according to the described algorithm is:
+B=[5,4,3,2,1]
+this is the largest lexicographically possible array B.
+
+Completed the function coolGraph in the editor below. the fucntion must return an array representing array B.
+int g_nodes : the number of nodes
+int g_from : one end of each connected pair of nodes
+int g_to : the other end of each connected pair of nodes
+
+---Sample Case 0
+g_nodes =3, M =2
+g_from = [3,3], g_to=[1,2]
+
+Sample output,
+3,2,1
+Explanation
+Graph:
+ 1   2
+  \ /
+   3
+traversal order = 3->2->3->1, array A = [3,2,3,1]
+Array B, according to the described algorithm is: B = [3,2,1]
+
+---Sample Case 2
+g_nodes =4, M =4
+g_from = [1,2,3,2,1], g_to=[2,3,4,4,4]
+Sample output,
+4,3,2,1
+Explanation
+Graph:
+   3 
+  / \ 
+  2-4
+  \ /
+   1
+traversal order = 4->3->2->1, array A = [4,3,2,1]
+Array B, according to the described algorithm is: B = [4,3,2,1]
