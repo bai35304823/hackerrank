@@ -23,7 +23,7 @@ SQL Solutions are coded using MySQL
 | [   Amazon Sort the Summary](https://github.com/bai35304823/hackerrank/blob/d596f6691d5d8705c5bbcdfc411968547b3e1548/hackerank_picture/SE%20assessment/Amazon%20Sort%20the%20Summary/Sort%20the%20Summary.pdf)  | [NA.java]()  |
 | [   Make Median](https://github.com/bai35304823/hackerrank/blob/0af0b49b4f80e1c84cf91f1f5940267fce69a17b/hackerank_picture/SE%20assessment/Make%20Median/Make%20Median.jpg)  | [NA.java]()  |
 | [   HackerRank to the ASCIl string ](src/main/java/hackerrank/ASICC)  | [Solution.java](src/main/java/hackerrank/AsciiDecoder.java)  |
-| [   Service Maintains A Database ](src/main/java/hackerrank/service maintains a database)  | [Solution.java](src/main/java/hackerrank/Main.java)  |
+| [   Service Maintains A Database ](src/main/java/hackerrank/service-maintains-a-database)  | [Solution.java](src/main/java/hackerrank/Main.java)  |
 
 | Trial 1 Challenge  | Solution |
 | ------------- | ------------- |
