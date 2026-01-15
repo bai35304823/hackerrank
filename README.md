@@ -25,6 +25,7 @@ SQL Solutions are coded using MySQL
 | [   HackerRank to the ASCIl string ](src/main/java/hackerrank/ASICC)  | [Solution.java](src/main/java/hackerrank/AsciiDecoder.java)  |
 | [   Service Maintains A Database ](src/main/java/hackerrank/service-maintains-a-database)  | [Solution.java](src/main/java/hackerrank/Service_maintains_database.java)  |
 | [   Node traverse lexicographically largest ](src/main/java/hackerrank/Node-traverse-lexicographically-largest)  | [Solution.java](src/main/java/hackerrank/GraphTraversal.java)  |
+| [   largest-area-possible-after-removal-of-a-series-of-horizontal-vertical-bars ](https://www.geeksforgeeks.org/dsa/largest-area-possible-after-removal-of-a-series-of-horizontal-vertical-bars)  | [Solution.java](src/main/java/hackerrank/LargestAreaAfterBarRemoval.java)  |
 
 | Trial 1 Challenge  | Solution |
 | ------------- | ------------- |
