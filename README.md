@@ -47,9 +47,17 @@ SQL Solutions are coded using MySQL
 | [2. FizzBuzz](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_3/2.%20FizzBuzz/2022-11-28_115036.png)  | [NA.java]()  |
 | [3. Racing Car](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_3/3.%20Racing%20Car/2022-11-28_115315.png)  | [Solution.java](src/main/java/hackerrank/Racing_Car_dp11.java)  <br />[Solution2.java](src/main/java/hackerrank/Racing_Car_dp2.java)  |
 
+
 | Trial 4 Challenge  | Solution |
 | ------------- | ------------- |
 | [1. JavaScript Inventory List](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_4/1.%20JavaScript%20Inventory%20List/2022-11-28_115720.png)  | [NA.java]()  |
 | [2. Angular Customer Search using pipe](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_4/2.%20Angular%20Customer%20Search%20using%20pipe/2022-11-28_120154.png)  | [NA.java]()  |
 | [3. JavaScript Movie Titles List](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_4/3.%20JavaScript%20Movie%20Titles%20List/2022-11-28_120600.png)  | [NA.java]()  |
 | [4. Copy of Array Game](https://github.com/bai35304823/hackerrank/blob/3cb1f3e7f1fe0654847585c47a293bc15b94f672/hackerank_picture/Trial_4/4.%20Copy%20of%20Array%20Game/2022-11-28_120744.png)  | [Solution.java](src/main/java/hackerrank/Copy_of_Array_Game.java)  |
+
+
+| Trial I Challenge  | Solution |
+| ------------- | ------------- |
+| [1. Take The Current Maximum](https://github.com/bai35304823/hackerrank/blob/d033360d1cef96b974468469635c1fb2ca2403dc/hackerank_picture/take_the_current_maximum.png)  | [Solution.java](src/main/java/hackerrank/take_the_current_maximum.java)   |
+| [2. Get first Compatible](https://github.com/bai35304823/hackerrank/blob/d033360d1cef96b974468469635c1fb2ca2403dc/hackerank_picture/get1stCompatible.png)  | [NA.java]()  |
+| [3. Building Max Height](https://github.com/bai35304823/hackerrank/blob/d033360d1cef96b974468469635c1fb2ca2403dc/hackerank_picture/building-max-height.png)  | [Solution.java](src/main/java/hackerrank/building-max-height.java)  |
